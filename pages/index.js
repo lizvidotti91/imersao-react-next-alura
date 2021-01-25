@@ -1,10 +1,13 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import data from '../data.json';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const BackGroundQuiz = styled.section`
+  background-image: url(${({ backgroundImage }) => backgroundImage});
+  background-size: cover;
+`;
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <BackGroundQuiz backgroundImage={data.bg}>Oi</BackGroundQuiz>
+  );
 }
