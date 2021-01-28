@@ -53,15 +53,23 @@ Container.Content = styled.div`
   & > *:last-child {
     margin-bottom: 0;
   }
-  p{
+  form{
     input{
     border: 1px solid ${({ theme }) => theme.colors.primary};
     border-radius: 1vh;
     background-color: transparent;
     color: ${({ theme }) => theme.colors.contrastText};
+    margin-bottom: 2vh;
     padding: 0.8vw;
     width: 100%;
     }
+  }
+`;
+
+Container.ContentQuiz = styled.div`
+  width: 100%;
+  img{
+    width: 100%
   }
 `;
 

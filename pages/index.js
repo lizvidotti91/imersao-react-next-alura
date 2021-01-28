@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import BackgroundQuiz from '../src/components/BackgroundQuiz/styles';
 import QuizContainer from '../src/components/QuizContainer/styles';
 import QuizLogo from '../src/components/QuizLogo/styles';
@@ -6,8 +8,9 @@ import Footer from '../src/components/Footer/styles';
 import GitHubCorner from '../src/components/GitHubCorner/styles';
 import data from '../data.json';
 
-
 export default function Home() {
+  const rota = useRouter(); // inicializando a minha rota
+  const [nome, setNome] = React.useState('') // a constante nome tem estado inicial '' (string vazia), que vai ser alterado conforme formos digitando o nome em nosso input :)
   return (
     <BackgroundQuiz backgroundImage={data.bg}>
       <QuizContainer>
@@ -18,10 +21,21 @@ export default function Home() {
           </Container.Header>
           <Container.Content>
             <p>{data.description}</p>
-            <p>
-              <input type="text" placeholder={data.txtInput} />
-            </p>
-            <Container.Button>Jogar</Container.Button>
+            <form onSubmit={function (evento) {
+              evento.preventDefault(); // essa função evita que o console do browser recarregue
+              rota.push(`/quiz?name=${nome}`); // ao clicar no botão JOGAR, a nossa rota será ex.: url/quiz?name=Liz
+              // Router manda para a próxima página
+              // As rotas vão se "empilhando" no histórico do navegador
+            }}>
+              <input type="text" placeholder={data.txtInput} onChange={
+                function (evento) {
+                  // State/Estado
+                  setNome(evento.target.value);
+                  console.log(nome);
+                }
+              } />
+              <Container.Button type="submit" disabled={nome.length === 0}>É hora de jogar {nome}</Container.Button>
+            </form>
           </Container.Content>
         </Container>
 

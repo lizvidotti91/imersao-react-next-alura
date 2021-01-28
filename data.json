@@ -1,4 +1,5 @@
 {
+  "icon": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/icon.png",
   "bg": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/img-background.png",
   "imgLogo": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/img-logo-copy.png",
   "title": "Modern Family Quiz",
@@ -6,25 +7,87 @@
   "txtInput": "Díz aí seu nome para jogar :)",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "image": "https://media4.giphy.com/media/fYGM9HVdNeSzOI3Wet/giphy.gif",
+      "title": "A sitcon Modern Family tem quantas temporadas?",
+      "description": "Essa é pra aquecer!",
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "9",
+        "11",
+        "10",
+        "8"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://64.media.tumblr.com/tumblr_lk6q7mV5NV1qjuuqbo1_400.gif",
+      "title": "Em que dia foi ao ar o episódio piloto de Modern Family?",
+      "description": "Duvido você acertar",
+      "answer": 2,
+      "alternatives": [
+         "23 de setembro de 2008",
+         "23 de setembro de 2010",
+         "23 de setembro de 2009",
+         "23 de setembro de 2011"
+      ]
+    },
+    {
+      "image": "https://media4.giphy.com/media/hQuNNXg0Lp3LAuTQPX/giphy.gif",
+      "title": "Qual o nome da música que Dylan toca para Haley, na primeira temporada?",
+      "description": "Você lembra desse episódio?",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "In the moonlight",
+         "Tonight",
+         "In the sunrise",
+         "Sweet Haley"
+      ]
+    },
+    {
+      "image": "https://media2.giphy.com/media/122H5tXgm0WJ5C/giphy.gif",
+      "title": "Qual o nome do palhaço interpretado pelo personagem Cameron?",
+      "description": "Deixe o Cam orgulhoso! Quero ver acertar",
+      "answer": 1,
+      "alternatives": [
+         "Rizbo",
+         "Fizbo",
+         "Frisbee",
+         "Fizbeau"
+      ]
+    },
+    {
+      "image": "https://media2.giphy.com/media/3o7TKNs79OWoMvih9K/giphy.gif",
+      "title": "Qual membro da família era o crush de Manny, em sua infância?",
+      "description": "Manny e suas mulheres... aiai",
+      "answer": 3,
+      "alternatives": [
+         "Alex",
+         "Claire",
+         "Gloria",
+         "Haley"
+      ]
+    },
+    {
+      "image": "https://media1.giphy.com/media/KxyeX0QO9hnv7S5xaT/giphy.gif",
+      "title": "Qual música é tocada para anunciar a chegada da bebê Lily?",
+      "description": "Essa música é TU-DO!",
+      "answer": 0,
+      "alternatives": [
+         "Circle of Life, the Lion King",
+         "I just can't wait to be King, the Lion King",
+         "Hakuna Matata, the Lion King",
+         "The Lion Sleeps Tonight, the Lion King"
+      ]
+    },
+    {
+      "image": "https://media4.giphy.com/media/3o7bu66Swdn296qZDG/giphy.gif",
+      "title": "Qual o nome da empresa rival da Pritchett's Closets?",
+      "description": "O Jay fica nervoso só de ouvir falar",
+      "answer": 3,
+      "alternatives": [
+         "Closets",
+         "Closets, Closets",
+         "Closets, Closets, Closets",
+         "Closets, Closets, Closets, Closets"
       ]
     }
   ],
