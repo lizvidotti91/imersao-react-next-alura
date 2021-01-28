@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <BackgroundQuiz backgroundImage={data.bg}>
       <QuizContainer>
-        <QuizLogo>Logo</QuizLogo>
+        <QuizLogo />
         <Container>
           <Container.Header>
             <h1>{data.title}</h1>
