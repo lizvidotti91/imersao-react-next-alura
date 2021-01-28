@@ -18,14 +18,22 @@ export default function Home() {
           </Container.Header>
           <Container.Content>
             <p>{data.description}</p>
+            <p>
+              <input type="text" placeholder={data.txtInput} />
+            </p>
+            <Container.Button>Jogar</Container.Button>
           </Container.Content>
         </Container>
 
         <Container>
           <Container.Content>
             <h1>Quizes da Galera</h1>
-
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Dá uma olhada nesses quizes incríveis que o pessoal da Imersão React + Next.js fez:</p>
+            <ul>
+              <li>Link 1</li>
+              <li>Link 2</li>
+              <li>Link 3</li>
+            </ul>
           </Container.Content>
         </Container>
         <Footer />

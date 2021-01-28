@@ -15,6 +15,17 @@ const Container = styled.div`
     line-height: 1;
     margin-bottom: 0;
   }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li{
+      background-color: ${({ theme }) => theme.colors.secondary};
+      border-radius: 1vh;
+      margin: 1vh 0;
+      padding: 0.8vw;
+    }
+  }
   p {
     font-size: 14px;
     font-weight: 400;
@@ -42,9 +53,29 @@ Container.Content = styled.div`
   & > *:last-child {
     margin-bottom: 0;
   }
-  ul {
-    list-style: none;
-    padding: 0;
+  p{
+    input{
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border-radius: 1vh;
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.contrastText};
+    padding: 0.8vw;
+    width: 100%;
+    }
+  }
+`;
+
+Container.Button = styled.button`
+  background-color: #979797;
+  border: none;
+  border-radius: 1vh;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  color: ${({ theme }) => theme.colors.contrastText};
+  text-transform: uppercase;
+  padding: 0.8vw;
+  width: 100%;
+  &:hover{
+    background-color: #ababab;
   }
 `;
 
