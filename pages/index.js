@@ -4,6 +4,8 @@ import BackgroundQuiz from '../src/components/BackgroundQuiz/styles';
 import QuizContainer from '../src/components/QuizContainer/styles';
 import QuizLogo from '../src/components/QuizLogo/styles';
 import Container from '../src/components/Container/styles';
+import Input from '../src/components/Input/styles';
+import Button from '../src/components/Button/styles';
 import Footer from '../src/components/Footer/styles';
 import GitHubCorner from '../src/components/GitHubCorner/styles';
 import data from '../data.json';
@@ -21,20 +23,33 @@ export default function Home() {
           </Container.Header>
           <Container.Content>
             <p>{data.description}</p>
-            <form onSubmit={function (evento) {
-              evento.preventDefault(); // essa função evita que o console do browser recarregue
-              rota.push(`/quiz?name=${nome}`); // ao clicar no botão JOGAR, a nossa rota será ex.: url/quiz?name=Liz
-              // Router manda para a próxima página
-              // As rotas vão se "empilhando" no histórico do navegador
-            }}>
-              <input type="text" placeholder={data.txtInput} onChange={
-                function (evento) {
+            <form
+              onSubmit={(evento) => { // Arrow function
+                evento.preventDefault(); // essa função evita que o console do browser recarregue
+                rota.push(`/quiz?name=${nome}`); // ao clicar no botão JOGAR, a nossa rota será ex.: url/quiz?name=Liz
+                // Router manda para a próxima página
+                // As rotas vão se "empilhando" no histórico do navegador
+              }
+              }
+            >
+              <Input
+                name="Nome do Jogador"
+                value={nome}
+                type="text"
+                placeholder={data.txtInput}
+                onChange={(evento) => { // Arrow function
                   // State/Estado
                   setNome(evento.target.value);
                   console.log(nome);
                 }
-              } />
-              <Container.Button type="submit" disabled={nome.length === 0}>É hora de jogar {nome}</Container.Button>
+                }
+              />
+              <Button
+                type="submit"
+                disabled={nome.length === 0}
+              >
+                {`É hora de jogar ${nome}`}
+              </Button>
             </form>
           </Container.Content>
         </Container>

@@ -53,38 +53,22 @@ Container.Content = styled.div`
   & > *:last-child {
     margin-bottom: 0;
   }
-  form{
-    input{
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+`;
+
+Container.FormQuestion = styled.a`
+    background-color: ${({ theme }) => theme.colors.secondary};
     border-radius: 1vh;
-    background-color: transparent;
-    color: ${({ theme }) => theme.colors.contrastText};
-    margin-bottom: 2vh;
+    cursor: pointer;
+    display: block;
+    margin: 2vh 0;
     padding: 0.8vw;
     width: 100%;
+    &:hover{
+      background-color: #5f6b72;
     }
-  }
-`;
-
-Container.ContentQuiz = styled.div`
-  width: 100%;
-  img{
-    width: 100%
-  }
-`;
-
-Container.Button = styled.button`
-  background-color: #979797;
-  border: none;
-  border-radius: 1vh;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
-  color: ${({ theme }) => theme.colors.contrastText};
-  text-transform: uppercase;
-  padding: 0.8vw;
-  width: 100%;
-  &:hover{
-    background-color: #ababab;
-  }
+    input{
+      display: none;
+    }
 `;
 
 export default Container; 
