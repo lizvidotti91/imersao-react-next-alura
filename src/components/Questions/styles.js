@@ -18,14 +18,14 @@ function Questions({ index, total, questions, onSubmit, addResultado }) {
                 <Arrow />
                 <h1>{`Pergunta ${index + 1} de ${total}`}</h1>
             </Container.Header>
+            <img
+                src={questions.image}
+                style={{
+                    objectFit: 'cover',
+                    width: '100%',
+                }}
+            />
             <Container.Content>
-                <img
-                    src={questions.image}
-                    style={{
-                        objectFit: 'cover',
-                        width: '100%',
-                    }}
-                />
                 <h2>{questions.title}</h2>
                 <p>{questions.description}</p>
                 <form

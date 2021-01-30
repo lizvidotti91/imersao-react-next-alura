@@ -5,7 +5,7 @@ const QuizLogoWrapper = styled.figure`
     display: flex;
     justify-content: center;
     img{
-        height: 20vh;
+        height: 8vh;
     }
 `;
 
