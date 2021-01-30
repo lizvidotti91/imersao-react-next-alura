@@ -53,6 +53,23 @@ Container.Content = styled.div`
   & > *:last-child {
     margin-bottom: 0;
   }
+  .right{
+    background-color: ${({ theme }) => theme.colors.success};
+    border: none;
+    border-radius: 50%;
+    font-size: 4vh;
+    line-height: 7vh;
+    margin: 4vh auto 0;
+    text-align: center;
+    width: 7vh;
+  }
+  .wrong{
+    color: ${({ theme }) => theme.colors.wrong};
+    font-size: 7vh;
+    margin: 4vh auto 0;
+    text-align: center;
+    width: 7vh;
+  }
 `;
 
 Container.FormQuestion = styled.a`
@@ -65,6 +82,16 @@ Container.FormQuestion = styled.a`
     width: 100%;
     &:hover{
       background-color: #5f6b72;
+    }
+    &[data-selected="true"] {
+      background-color: ${({ theme }) => theme.colors.primary};
+      
+      &[data-status="SUCCESS"] {
+        background-color: ${({ theme }) => theme.colors.success};
+      }
+      &[data-status="ERROR"] {
+        background-color: ${({ theme }) => theme.colors.wrong};
+      }
     }
     input{
       display: none;

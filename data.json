@@ -1,7 +1,7 @@
 {
   "icon": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/icon.png",
   "bg": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/img-background.png",
-  "imgLogo": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/img-logo-copy.png",
+  "imgLogo": "https://raw.githubusercontent.com/lizvidotti91/imersao-react-next-alura/main/src/img/novaLogo.png",
   "title": "Modern Family Quiz",
   "description": "Teste seus conhecimentos sobre a sitcon Modern Family e divirta-se!",
   "txtInput": "Díz aí seu nome para jogar :)",
@@ -100,8 +100,8 @@
       "secondary": "#37474f",
       "mainBg": "#000000",
       "contrastText": "#ffffff",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "wrong": "#b23c17",
+      "success": "#357a38"
     },
     "borderRadius": "4px"
   }

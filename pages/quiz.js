@@ -29,10 +29,19 @@ function PageQuiz() {
     const [estadoDaTela, setEstadoDeTela] = React.useState(EstadosDaTela.LOADING);
     // Iniciar nosso contador do index das questões
     const [questaoAtual, setQuestaoAtual] = React.useState(0);
+    // Armazenar os resultados do quiz
+    const [resultado, setResultado] = React.useState([]);
     // Declaração das variáveis para as alternativas das questões
     const total = data.questions.length;
     const index = questaoAtual;
     const questions = data.questions[index];
+
+    function addResultado(answer) {
+        setResultado([
+            ...resultado,
+            answer
+        ]);
+    }
 
     // QUANDO INICIA A PÁGINA COM O ESTADO DE LOADING, LEVAMOS 1000ms PARA MUDAR O ESTADO DA TELA PARA QUIZ
     useEffect(() => {
@@ -67,9 +76,10 @@ function PageQuiz() {
                         total={total}
                         questions={questions}
                         onSubmit={handleSubmit}
+                        addResultado={addResultado}
                     />}
                 {/* Página com o resultado */}
-                {estadoDaTela === EstadosDaTela.RESULTADO && <ResultQuiz />}
+                {estadoDaTela === EstadosDaTela.RESULTADO && <ResultQuiz resultado={resultado} />}
                 <Footer />
             </QuizContainer>
             <GitHubCorner projectUrl="https://github.com/lizvidotti91" />
