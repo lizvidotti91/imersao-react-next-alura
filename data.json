@@ -98,7 +98,7 @@
     "colors": {
       "primary": "#f57c00",
       "secondary": "#37474f",
-      "mainBg": "#000000",
+      "mainBg": "#263238",
       "contrastText": "#ffffff",
       "wrong": "#b23c17",
       "success": "#357a38"

@@ -31,6 +31,13 @@ const Container = styled.div`
     font-weight: 400;
     line-height: 1;
   }
+  a{
+    color: ${({ theme }) => theme.colors.contrastText};
+    text-decoration: none;
+    &:hover{
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
 `;
 
 Container.Header = styled.header`

@@ -74,12 +74,12 @@ function Questions({ index, total, questions, onSubmit, addResultado }) {
                     <Button type="submit" disabled={!temAlternativa}>Confirmar</Button>
                     {clicouBotao && estaCorreto &&
                         <p className="right">
-                            <i class="fas fa-check"></i>
+                            <i className="fas fa-check"></i>
                         </p>
                     }
                     {clicouBotao && !estaCorreto &&
                         <p className="wrong">
-                            <i class="far fa-times-circle"></i>
+                            <i className="far fa-times-circle"></i>
                         </p>
                     }
                 </form>

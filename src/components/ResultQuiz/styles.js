@@ -1,6 +1,12 @@
 import Container from '../Container/styles';
 import Button from '../Button/styles';
 
+// export function nomeJogador({ url: { query: { name } } }) {
+//     return (
+//         <p>Mandou bem, {name}!</p>
+//     );
+// }
+
 function ResultQuiz({ resultado }) {
     const total = resultado.reduce((soma, elemento) => {
         if (elemento == true) {
@@ -14,10 +20,16 @@ function ResultQuiz({ resultado }) {
                 <h1>Resultado</h1>
             </Container.Header>
             <Container.Content>
-                <p>Mandou bem, Fulano!</p>
+                {/* <nomeJogador /> */}
                 <p>Você fez {total} pontos, parabéns!</p>
                 <Button>Adicionar ao meu projeto</Button>
-                <a href="/">Voltar para a Home</a>
+                <p
+                    style={{
+                        textAlign: 'center',
+                    }}
+                >
+                    <a href="/">Voltar para a Home</a>
+                </p>
             </Container.Content>
         </Container>
     );
