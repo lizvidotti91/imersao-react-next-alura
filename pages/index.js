@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import BackgroundQuiz from '../src/components/BackgroundQuiz/styles';
 import QuizContainer from '../src/components/QuizContainer/styles';
@@ -15,7 +16,16 @@ export default function Home() {
   const [nome, setNome] = React.useState('') // a constante nome tem estado inicial '' (string vazia), que vai ser alterado conforme formos digitando o nome em nosso input :)
   return (
     <BackgroundQuiz backgroundImage={data.bg}>
-      <QuizContainer>
+      <QuizContainer
+        as={motion.section}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        variants={{
+          show: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        initial="hidden"
+        animate="show"
+      >
         <QuizLogo />
         <Container>
           <Container.Header>
@@ -59,9 +69,18 @@ export default function Home() {
             <h1>Quizes da Galera</h1>
             <p>Dá uma olhada nesses quizes incríveis que o pessoal da Imersão React + Next.js fez:</p>
             <ul>
-              <li>Link 1</li>
-              <li>Link 2</li>
-              <li>Link 3</li>
+              {
+                data.external.map((item) => {
+                  const [projeto, nome] = item.replace('https://', '').replace('.vercel.app/', '').split('.');
+                  return (
+                    <li key={item}>
+                      <a
+                        href={item}
+                        target="blank">{nome}/{projeto}</a>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </Container.Content>
         </Container>

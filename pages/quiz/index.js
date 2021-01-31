@@ -1,12 +1,14 @@
-import BackgroundQuiz from '../src/components/BackgroundQuiz/styles';
-import LoadContainer from '../src/components/LoadContainer/styles';
-import QuizContainer from '../src/components/QuizContainer/styles';
-import QuizLogo from '../src/components/QuizLogo/styles';
-import Questions from '../src/components/Questions/styles';
-import ResultQuiz from '../src/components/ResultQuiz/styles';
-import Footer from '../src/components/Footer/styles';
-import GitHubCorner from '../src/components/GitHubCorner/styles';
-import data from '../data.json';
+import BackgroundQuiz from '../../src/components/BackgroundQuiz/styles';
+import LoadContainer from '../../src/components/LoadContainer/styles';
+import QuizContainer from '../../src/components/QuizContainer/styles';
+import QuizLogo from '../../src/components/QuizLogo/styles';
+import Questions from '../../src/components/Questions/styles';
+import ResultQuiz from '../../src/components/ResultQuiz/styles';
+import Footer from '../../src/components/Footer/styles';
+import GitHubCorner from '../../src/components/GitHubCorner/styles';
+import data from '../../data.json';
+
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
 // Informando quais são os três estados em que a tela pode estar
@@ -62,7 +64,16 @@ function PageQuiz() {
 
     return (
         <BackgroundQuiz backgroundImage={data.bg}>
-            <QuizContainer>
+            <QuizContainer
+                as={motion.section}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                variants={{
+                    show: { opacity: 1 },
+                    hidden: { opacity: 0 },
+                }}
+                initial="hidden"
+                animate="show"
+            >
                 <QuizLogo />
                 {/* Verificando o Estado da Tela para definir quando deve ser carregada a tela de Loadind, e quando deve ser carregada a tela do Quiz */}
                 {/* SE a operação lógica for verdadeira, ENTÃO execute a ação logo após o && */}

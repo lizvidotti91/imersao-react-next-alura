@@ -1,11 +1,11 @@
 import Container from '../Container/styles';
 import Button from '../Button/styles';
 
-// export function nomeJogador({ url: { query: { name } } }) {
-//     return (
-//         <p>Mandou bem, {name}!</p>
-//     );
-// }
+export function nomeJogador(context) {
+    return (
+        <p>Mandou bem, {context.query}!</p>
+    );
+}
 
 function ResultQuiz({ resultado }) {
     const total = resultado.reduce((soma, elemento) => {
