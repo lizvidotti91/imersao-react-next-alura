@@ -11,6 +11,7 @@ Evento promovido pela Alura entre os dias 25/01/2021 e 01/02/2021, com o objetiv
 *   [React](https://pt-br.reactjs.org/); 
 *   [Next.js](https://nextjs.org/); 
 * [Styled-components](https://styled-components.com/docs/advanced); 
+- [Exemplo de App com Styled-Components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components);
 * [Framer Motion](https://www.framer.com/motion/); 
 
 ## Trabalhando com Next.js + Styled Components
