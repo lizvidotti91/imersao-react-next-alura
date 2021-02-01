@@ -4,6 +4,8 @@
 
 Evento promovido pela Alura entre os dias 25/01/2021 e 01/02/2021, com o objetivo de construir uma página de Quiz em React e Next.js.
 
+- [Vitrine dos Projetos](https://aluraquiz-base.alura-challenges.vercel.app/contribuidores);
+
 ## Tecnologias usadas
 
 *   [React](https://pt-br.reactjs.org/); 
